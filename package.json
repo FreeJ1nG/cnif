@@ -4,10 +4,22 @@
   "version": "1.0.0",
   "license": "ISC",
   "author": "FreeJ1nG",
-  "description": "Utility library to do if conditionals with clsx",
-  "main": "index.js",
+  "description": "Utility library to do if conditionals, better used with clsx and twMerge",
+  "main": "./dist/esm/index.js",
+  "types": "./dist/esm/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/esm/index.d.ts",
+        "default": "./dist/esm/index.js"
+      },
+      "require": {
+        "default": "./dist/cjs/index.js"
+      }
+    }
+  },
   "scripts": {
-    "build": "tsc -p tsconfig.build.json"
+    "build": "rm -rf ./dist && tsc -p tsconfig.esm.json && tsc -p tsconfig.cjs.json"
   },
   "keywords": [
     "clsx",
