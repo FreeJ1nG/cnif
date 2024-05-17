@@ -1,0 +1,17 @@
+.vscode/
+node_modules/
+lib/
+dist/
+out/
+coverage/
+
+.DS_Store
+.npmrc
+*.tar
+*.gz
+*.tgz
+*.zip
+*.log
+
+!**/__tests__/src/node_modules
+**/__tests__/src/node_modules/.*

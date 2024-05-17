@@ -1,0 +1,24 @@
+{
+  "name": "cnif",
+  "type": "module",
+  "version": "1.0.0",
+  "license": "ISC",
+  "author": "FreeJ1nG",
+  "description": "Utility library to do if conditionals with clsx",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json"
+  },
+  "keywords": [
+    "clsx",
+    "tailwind-merge",
+    "utility",
+    "css",
+    "resolution"
+  ],
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "eslint-config-rational": "^5.0.14",
+    "typescript": "^5.4.5"
+  }
+}
