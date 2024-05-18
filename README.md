@@ -4,6 +4,12 @@
 
 `cnif` is a utility function designed to complement the `clsx` and `twMerge` libraries, providing a concise way to handle conditional CSS class names using if, else if, and else logic. This utility simplifies dynamic class name management in your React projects and can be seamlessly integrated with Tailwind CSS for a streamlined styling experience.
 
+```ts
+cnif(object: Record<string, boolean>, defaultValue?: string = "")
+// Accepts an object, returning the first key which is true
+// Returns defaultValue when no object value is true
+```
+
 ## Installation
 
 You can install `cnif` via npm:
@@ -35,7 +41,7 @@ clsx(
   cnif(
     {
       // if an option is selected, highlight it
-      "bg-primary text-white": selectedFeedback === option.label,
+      "bg-primary text-white": selectedOption === option.label,
     },
     cnif(
       {
@@ -53,4 +59,14 @@ clsx(
     "border-[#949494] text-[10px] font-bold": variant === "gray",
   },
 );
+
+/**
+ * selectedOption = 'foo'
+ * option = {
+ *   label: 'bar',
+ *   color: 'negative'
+ * }
+ * variant = 'gray'
+ */
+//=> 'bg-red-600 border-[#949494] text-[10px] font-bold'
 ```

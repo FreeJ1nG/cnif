@@ -1,7 +1,7 @@
 {
   "name": "cnif",
   "type": "module",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "license": "ISC",
   "author": "FreeJ1nG",
   "description": "Utility library to do if conditionals, better used with clsx and twMerge",
